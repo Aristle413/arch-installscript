@@ -1,0 +1,22 @@
+Please configure system clock and partitions before running!
+
+Try:
+
+
+
+mkfs.fat -F 32 /dev/sda1
+mkswap /dev/sda2
+mkfs.ext4 /dev/sda3
+mkfs.btrfs /dev/sda4
+
+
+
+Also:
+
+
+
+export EFI_PARTITION=/dev/sda1
+export SWAP_PARTITION=/dev/sda2
+export DATA_PARTITION=/dev/sda3
+export ROOT_PARTITION=/dev/sda4
+export INST_HOSTNAME=arch-gnome
